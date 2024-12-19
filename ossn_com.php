@@ -21,7 +21,7 @@ function clipboard_init() {
             'name' => 'clipboard',
             'href' => '?section=clipboard',
             'text' => 'Clipboard', // Direct de tekst "Clipboard" instellen
-));
+        ));
     }
 
     // Registreer een pagina-handler voor de module
@@ -174,7 +174,6 @@ function clipboard_download_data($user) {
         echo "No blogs found.\n";
     }
 }
-
 
 // Initialiseer de module
 ossn_register_callback('ossn', 'init', 'clipboard_init');
