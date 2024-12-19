@@ -1,2 +1,4 @@
-be aware, work in progress and code is 90% done
-module for the ossn social network
+19-12-2024
+13:00 Amsterdam time added all the code working as should be
+Test site
+https://shadow.nlsociaal.nl
