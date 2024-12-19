@@ -1,19 +1,5 @@
 header("Content-type: text/css; charset: UTF-8");
 ?>
-.clipboard-activity-log a {
-    display: block;
-    margin: 15px 0;
-    padding: 10px 15px;
-    text-align: center;
-    border-radius: 5px;
-    text-decoration: none;
-    color: #fff;
-    background-color: #17a2b8; /* Info kleur */
-}
-
-.clipboard-activity-log a:hover {
-    background-color: #138496;
-}
 .clipboard {
     position: fixed;
     right: 0;
@@ -60,4 +46,3 @@ header("Content-type: text/css; charset: UTF-8");
 .clipboard-download a:hover {
     background-color: #689f38;
 }
-
