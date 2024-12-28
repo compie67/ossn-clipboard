@@ -1,5 +1,26 @@
-be aware, work in progress and code is 90% done
-module for the ossn social network
+28-12-2024
+Changes Made
+Bug Fix: Missing Blog Class Handling
+
+Added a check in clipboard_fetch_user_data() to verify if the Blog class exists before using it.
+If the Blog class is unavailable (e.g., the Blogs component is not installed), the code logs a warning and gracefully defaults to an empty list of blogs. This prevents crashes in environments without the Blogs component.
+Improved Fallback Logic
+
+Ensured that the Clipboard component remains functional even when optional dependencies, like the Blogs component, are missing.
+Enhanced Debugging
+
+Added error_log statements to provide useful debugging information when:
+Posts or comments contain invalid data.
+The Blog class is missing or unavailable.
+Updated ossn_com.php
+
+Improved the structure and readability of the file.
+Added robust error handling for unexpected situations (e.g., missing GUIDs or invalid objects).
+Updated component.xml
+
+Bumped the component version to 2.1 to reflect the latest updates.
+Enhanced the description to better communicate the component’s purpose and functionality.
+Retained the MIT license, which allows free use, modification, and distribution with attribution.
 
 19-12-2024
 code added and made complete
