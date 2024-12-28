@@ -28,5 +28,6 @@ $nl = array(
     'clipboard:delete_confirm' => 'Weet je zeker dat je alle Clipboard-gegevens wilt verwijderen? Deze actie kan niet ongedaan worden gemaakt.',
     'clipboard:delete_success' => 'Je Clipboard-gegevens zijn succesvol verwijderd.',
     'clipboard:delete_error' => 'Het is niet gelukt om je Clipboard-gegevens te verwijderen. Probeer het opnieuw.',
+    'clipboard:no_blogs_component' => 'Het Blogs-component is niet geïnstalleerd of geactiveerd.',
 );
 ossn_register_languages('nl', $nl);
