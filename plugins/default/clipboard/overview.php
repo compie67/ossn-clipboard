@@ -82,25 +82,36 @@ if (!empty($data['posts'])) {
 // ---------- BLOGS WEERGEVEN ----------
 // ---------- DISPLAY BLOGS ----------
 echo "<h4>" . ossn_print('clipboard:blogs') . "</h4>";
-if (!empty($data['blogs'])) {
-    // Loop door alle blogs
-    // Loop through all blogs
-    foreach ($data['blogs'] as $blog_post) {
-        $blog_title = htmlspecialchars($blog_post->title);
-        $blog_date = date('d-m-Y H:i', $blog_post->time_created);
-        $blog_url = $blog_post->profileURL();
 
-        // Toon bloginformatie
-        // Display blog information
-        echo "<div class='clipboard-blog'>";
-        echo "<p><strong><a href='{$blog_url}' target='_blank'>{$blog_title}</a></strong> - {$blog_date}</p>";
-        echo "</div>";
+// Controleer of de Blog-klasse bestaat
+// Check if the Blog class exists
+if (class_exists('Blog')) {
+    if (!empty($data['blogs'])) {
+        // Loop door alle blogs
+        // Loop through all blogs
+        foreach ($data['blogs'] as $blog_post) {
+            $blog_title = htmlspecialchars($blog_post->title);
+            $blog_date = date('d-m-Y H:i', $blog_post->time_created);
+            $blog_url = $blog_post->profileURL();
+
+            // Toon bloginformatie
+            // Display blog information
+            echo "<div class='clipboard-blog'>";
+            echo "<p><strong><a href='{$blog_url}' target='_blank'>{$blog_title}</a></strong> - {$blog_date}</p>";
+            echo "</div>";
+        }
+    } else {
+        // Geen blogs gevonden
+        // No blogs found
+        echo "<p>" . ossn_print('clipboard:no_blogs') . "</p>";
     }
 } else {
-    // Geen blogs gevonden
-    // No blogs found
-    echo "<p>" . ossn_print('clipboard:no_blogs') . "</p>";
+    // De Blog-klasse bestaat niet of is niet geactiveerd
+    // The Blog class does not exist or is not activated
+    echo "<p>" . ossn_print('clipboard:no_blogs_component') . "</p>";
+    error_log('Blog component is not installed or activated.');
 }
+
 
 // ---------- DOWNLOAD-KNOP TOEVOEGEN ----------
 // ---------- ADD DOWNLOAD BUTTON ----------
