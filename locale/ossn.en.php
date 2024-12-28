@@ -28,5 +28,6 @@ $en = array(
     'clipboard:delete_confirm' => 'Are you sure you want to delete all Clipboard data? This action cannot be undone.',
     'clipboard:delete_success' => 'Your Clipboard data has been successfully deleted.',
     'clipboard:delete_error' => 'Failed to delete your Clipboard data. Please try again.',
+    'clipboard:no_blogs_component' => 'Blogs-component not installed or active.',
 );
 ossn_register_languages('en', $en);
